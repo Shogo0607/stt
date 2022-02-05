@@ -37,4 +37,7 @@ result = streamlit_bokeh_events(
 
 if result:
     if "GET_TEXT" in result:
-        st.write(result.get("GET_TEXT"))
+        result_sentense = result.get("GET_TEXT")
+        st.write(result_sentense)
+        if result_sentense == "Cher":
+            result_sentense = "Share"
