@@ -3,7 +3,9 @@ from bokeh.models.widgets import Button
 from bokeh.models import CustomJS
 from streamlit_bokeh_events import streamlit_bokeh_events
 
-stt_button = Button(label="Speak", width=200)
+st.write("一回クリックを押すと、連続して音声データを取得します。音声の切れ目で認識した言葉を出力します。")
+st.write("マイクを許可するのと、英語の聞き取りにはブラウザの言語設定を「English」にする必要があります。")
+stt_button = Button(label="クリック", width=200)
 
 stt_button.js_on_event("button_click", CustomJS(code="""
     var recognition = new webkitSpeechRecognition();
